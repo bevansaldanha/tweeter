@@ -1,0 +1,35 @@
+.new-tweet{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+label{
+  font-weight: bolder;
+}
+textarea{
+  appearance: none;
+  display: flex;
+  align-self: flex-end;
+  height: 30px;
+  width: 100%;
+  background-color: inherit;
+	border: none;
+  font-size: .69em;
+  border-bottom: .2em solid black;
+  resize: none;
+
+}
+button{
+  margin-top: .5em;
+  font-family: 'Bungee', sans-serif;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+.tweet-count{
+  display: flex;
+  justify-content: space-between;
+
+}
+output{
+  font-family: 'Bungee', sans-serif;
+}

@@ -1,0 +1,12 @@
+.display {
+  height: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  background-color: rgba(224, 84, 34, 0.819);
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+
+}

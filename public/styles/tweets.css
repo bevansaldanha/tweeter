@@ -8,9 +8,10 @@
   border-style:solid;
   border-color:  solid black;
   border-width: .2em;
-  font-size:medium;
   padding: 1%; 
   cursor: pointer;
+
+
 }
 .tweets:hover{
   box-shadow: 10px 5px 5px rgb(175 167 167);
@@ -28,7 +29,7 @@ article{
   flex-direction: row;
   margin-left: 4%;
   font-weight:bold;
-  font-size:large;
+  /* font-size:large; */
   align-items: flex-end;
 }
 
@@ -39,6 +40,10 @@ hr{
   border-width: .1em;
 }
 
+#name{
+  display: flex;
+  align-self: flex-start;
+}
 #handle{
   color:rgb(191, 208, 208);
 }

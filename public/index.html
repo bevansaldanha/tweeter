@@ -32,7 +32,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/client.js" defer></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
@@ -60,7 +60,7 @@
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form method="post" action="/tweets/">
-        <label for="tweet-text">What are you humming about?</label>
+        <label>What are you humming about?</label>
         <textarea name="text" class="tweet-input"></textarea>
         <div class="tweet-count">
           <button type="submit">Tweet</button>
@@ -69,24 +69,29 @@
       </form>
     </section>
     <br>
-    <section class="tweets">
-      <header class="header-tweets">
-        <div>an image & name</div>
-        <div id = "handle">@handle</div>
-      </header>
-      <article>
-        content of tweet
-      </article>
-      <hr class="default">
-      <footer class="header-tweets">
-        <div>date</div>
-        <div>
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
-        </div>
-      </footer>
-    </section>
+    <div id="tweets-container">
+
+      <!-- <section class="tweets">
+        <header class="header-tweets">
+          <div id="avatar">avatar</div>
+          <div id="name">name</div>
+
+          <div id="handle">@handle</div>
+        </header>
+        <article>
+          content of tweet
+        </article>
+        <hr class="default">
+        <footer class="header-tweets">
+          <div>date</div>
+          <div>
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </section> -->
+    </div>
 
   </main>
 </body>

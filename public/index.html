@@ -63,7 +63,9 @@
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form method="post" action="/tweets/">
-        <label>What are you humming about?</label>
+        <label>What are you humming about?
+          <div id="error"> The text is either not between 1-140 characters or is empty! </div>
+        </label>
         <textarea name="text" class="tweet-input"></textarea>
         <div class="tweet-count">
           <button type="submit">Tweet</button>

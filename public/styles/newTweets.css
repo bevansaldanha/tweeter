@@ -17,8 +17,22 @@ textarea{
   font-size: .69em;
   border-bottom: .2em solid black;
   resize: none;
-
 }
+
+#error {
+  display: none;
+  justify-content: center;
+  padding: 5px 10px;
+  margin: 20px 350px;
+  background-color: #fce4e4;
+  border: 3px solid #fcc2c3;
+  color: #ef0f47;
+  font-weight: bold;
+  line-height: 35px;
+  width: 635px;
+  height: 43px;
+}
+
 button{
   margin-top: .5em;
   font-family: 'Bungee', sans-serif;

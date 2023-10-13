@@ -30,7 +30,11 @@
 //     "created_at": 1461113959088
 //   }
 // ];
-
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = function(tweetObj) {
   let $tweet =
@@ -42,7 +46,7 @@ const createTweetElement = function(tweetObj) {
           <div id="handle">${tweetObj.user.handle}</div>
         </header>
         <article>
-        ${tweetObj.content.text}
+        ${escape(tweetObj.content.text)}
         </article>
         <hr class="default">
         <footer class="header-tweets">
@@ -87,7 +91,6 @@ const renderTweets = function(tweets) {
 // const $tweet = createTweetElement(tweetData);
 
 // Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
 // renderTweets(data);
 
 const loadTweets = () => {
@@ -100,21 +103,26 @@ loadTweets();
 $('form').on('submit', function(event) {
   event.preventDefault();
   const data = $('form').serialize();
-  const counter = $(this).closest('.new-tweet').find('.counter-val').val();
-  if (counter >= 140 || counter < 0) {
-    console.log(counter);
-    alert('the tweet is not between 1 - 140 characters');
+
+
+  // turn the serialized input into a JSON object, and check if the input is valid
+  const testing = JSON.parse(JSON.stringify($('form').serializeArray()));
+  const updatedTester = testing[0].value.split("")
+  const justSpaces = testing[0].value.split("").filter((element) => element !== " " && element !== '\n' && element !== '\r')
+
+  if (updatedTester.length > 140 || updatedTester.length < 0 || !justSpaces.length) {
+    $('#error').slideDown();
   } else {
-    console.log(counter);
+    $('#error').slideUp();
+
     $('form').trigger('reset');
 
     //update the character counter value
     $(this).closest('.new-tweet').find('.counter-val').text(140);
-    $.post('/tweets', data);
-    $('#tweets-container').empty()
-    loadTweets()
+    $.post('/tweets', data, ()=>{
+      $('#tweets-container').empty();
+      loadTweets();
+    });
   }
-
-
 });
 

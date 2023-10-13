@@ -19,3 +19,8 @@ This repository is the starter code for the project: Students will fork and clon
 - Body-parser
 - Chance
 - md5
+
+## Screenshots
+
+https://github.com/bevansaldanha/tweeter/blob/master/docs/tweeter.png?raw=true
+https://github.com/bevansaldanha/tweeter/blob/master/docs/tweeter2.png?raw=true

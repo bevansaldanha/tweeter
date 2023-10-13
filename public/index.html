@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -14,7 +15,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap"
     rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -36,7 +39,8 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js" defer></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  
+
+
 </head>
 
 <body>
@@ -45,38 +49,39 @@
     <span id="tweeter">tweeter</span>
     <span id="on-the-right">
       Write a new tweet
-      <i class="fa-solid fa-angles-down" style="color: #ff0a0a;"></i>
+      <i class="fa-solid fa-angles-down fa-bounce" style="color: #ff0a0a;"></i>
     </span>
   </nav>
-  <header class="display">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Your Name</h2>
-    </div>
-  </header>
+  <div class="diff-container">
+    <header class="display">
+      <div>
+        <img src="/images/profile-hex.png">
+      </div>
+      <br>
+      <div>
+        <h2>Your Name</h2>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form method="post" action="/tweets/">
-        <label>What are you humming about?
-          <div id="error"> The text is either not between 1-140 characters or is empty! </div>
-        </label>
-        <textarea name="text" class="tweet-input"></textarea>
-        <div class="tweet-count">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter-val" for="tweet-text">140</output>
-        </div>
-      </form>
-    </section>
-    <br>
-    <div id="tweets-container">
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="post" action="/tweets/">
+          <label>What are you humming about?
+            <div id="error"> The text is either not between 1-140 characters or is empty! </div>
+          </label>
+          <textarea name="text" class="tweet-input"></textarea>
+          <div class="tweet-count">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter-val" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <br>
+      <div id="tweets-container">
 
-      <!-- <section class="tweets">
+        <!-- <section class="tweets">
         <header class="header-tweets">
           <div id="avatar">avatar</div>
           <div id="name">name</div>
@@ -96,9 +101,10 @@
           </div>
         </footer>
       </section> -->
-    </div>
+      </div>
 
-  </main>
+    </main>
 </body>
+</div>
 
 </html>

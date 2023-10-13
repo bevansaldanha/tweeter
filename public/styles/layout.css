@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -21,7 +24,7 @@ body {
   font-family: "Source Sans 3", sans-serif;
 }
 
-.container{
+.container {
   background-color: #f4f1ec;
   margin-left: 4%;
   margin-right: 4%;
@@ -34,3 +37,21 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+@media only screen and (min-width: 1024px) {
+  .diff-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .container {
+    background-color: #f4f1ec;
+    margin-right: 20px;
+    width: 66%;
+    display: flex;
+
+    align-content: flex-end;
+  }
+}

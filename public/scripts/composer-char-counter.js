@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  // --- our code goes here ---
   $('.tweet-input').on('input', function() {
     const counter = $(this).closest('.new-tweet').find('.counter-val');
     const value = 140 - (this.value.length);

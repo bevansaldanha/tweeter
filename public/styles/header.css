@@ -1,12 +1,29 @@
 .display {
-  height: 650px;
+  height: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding-top: 100px;
-  background-color: rgba(224, 84, 34, 0.819);
+  background-color: rgba(227 159 58);
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .display {
+    height: 325px;
+    width: 400px;
+    margin-left: 10px;
+  }
+
+  .display img {
+    height: 160px;
+    width: 180px;
+  }
 }

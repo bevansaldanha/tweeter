@@ -1,36 +1,4 @@
-// /*
-//  * Client-side JS logic goes here
-//  * jQuery is already loaded
-//  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
-//  */
-
-
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ];
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -40,8 +8,10 @@ const createTweetElement = function(tweetObj) {
   let $tweet =
     `<section class="tweets">
         <header class="header-tweets">
+          <span id = "av-and-name">
           <div id=""><img src="${tweetObj.user.avatars}"></div>
           <div id="name">${tweetObj.user.name}</div>
+          </span>
 
           <div id="handle">${tweetObj.user.handle}</div>
         </header>
@@ -70,28 +40,11 @@ const renderTweets = function(tweets) {
 
 
     // takes return value and appends it to the tweets container
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
 
   }
 };
 
-
-// const tweetData = {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//     "handle": "@SirIsaac"
-//   },
-//   "content": {
-//     "text": "If I have seen further it is by standing on the shoulders of giants"
-//   },
-//   "created_at": 1461116232227
-// };
-
-// const $tweet = createTweetElement(tweetData);
-
-// Test / driver code (temporary)
-// renderTweets(data);
 
 const loadTweets = () => {
   $.get('/tweets', (data) => {
@@ -107,8 +60,8 @@ $('form').on('submit', function(event) {
 
   // turn the serialized input into a JSON object, and check if the input is valid
   const testing = JSON.parse(JSON.stringify($('form').serializeArray()));
-  const updatedTester = testing[0].value.split("")
-  const justSpaces = testing[0].value.split("").filter((element) => element !== " " && element !== '\n' && element !== '\r')
+  const updatedTester = testing[0].value.split("");
+  const justSpaces = testing[0].value.split("").filter((element) => element !== " " && element !== '\n' && element !== '\r');
 
   if (updatedTester.length > 140 || updatedTester.length < 0 || !justSpaces.length) {
     $('#error').slideDown();
@@ -119,7 +72,7 @@ $('form').on('submit', function(event) {
 
     //update the character counter value
     $(this).closest('.new-tweet').find('.counter-val').text(140);
-    $.post('/tweets', data, ()=>{
+    $.post('/tweets', data, () => {
       $('#tweets-container').empty();
       loadTweets();
     });

@@ -1,19 +1,21 @@
-.new-tweet{
+.new-tweet {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-label{
+
+label {
   font-weight: bolder;
 }
-textarea{
+
+textarea {
   appearance: none;
   display: flex;
   align-self: flex-end;
   height: 30px;
   width: 100%;
   background-color: inherit;
-	border: none;
+  border: none;
   font-size: .69em;
   border-bottom: .2em solid black;
   resize: none;
@@ -21,29 +23,31 @@ textarea{
 
 #error {
   display: none;
-  justify-content: center;
   padding: 5px 10px;
-  margin: 20px 350px;
+  margin: 20px 5vw;
   background-color: #fce4e4;
   border: 3px solid #fcc2c3;
   color: #ef0f47;
   font-weight: bold;
-  line-height: 35px;
-  width: 635px;
-  height: 43px;
+  width: max-content;
+  height: max-content;
+  font-size: 2vw;
+
 }
 
-button{
+button {
   margin-top: .5em;
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
   color: #FFFFFF;
 }
-.tweet-count{
+
+.tweet-count {
   display: flex;
   justify-content: space-between;
 
 }
-output{
+
+output {
   font-family: 'Bungee', sans-serif;
 }

@@ -9,6 +9,7 @@ nav {
   position: fixed;
   background-color: rgba(227 159 58);
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  font-size: 90%;
 }
 
 #tweeter {

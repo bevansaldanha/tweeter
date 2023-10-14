@@ -15,9 +15,11 @@ const createTweetElement = function(tweetObj) {
 
           <div id="handle">${tweetObj.user.handle}</div>
         </header>
+        <div id = content>
         <article>
         ${escape(tweetObj.content.text)}
         </article>
+        </div>
         <hr class="default">
         <footer class="header-tweets">
           <div>${timeago.format(tweetObj.created_at)}</div>

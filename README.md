@@ -22,6 +22,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-(https://github.com/bevansaldanha/tweeter/blob/master/docs/tweeter.png?raw=true)
+!["Screenshot 1"](https://github.com/bevansaldanha/tweeter/blob/master/docs/tweeter.png?raw=true)
 
-(https://github.com/bevansaldanha/tweeter/blob/master/docs/tweeter2.png?raw=true)
+
+!["Screenshot 2"](https://github.com/bevansaldanha/tweeter/blob/master/docs/tweeter2.png?raw=true)
